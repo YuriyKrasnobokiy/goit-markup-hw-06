@@ -68,6 +68,7 @@
   --modal-input-placeholder-color: rgba(117, 117, 117, 0.5);
   --modal-input-title-color: #757575;
   --modal-checkbox-text-color: #757575;
+  --modal-button-focus-color: #188ce8;
   --checkbox-link-color: #2196f3;
 
   --function-cubic: cubic-bezier(0.4, 0, 0.2, 1);
@@ -728,6 +729,7 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .submit-input::placeholder {
@@ -743,11 +745,15 @@ body {
 }
 
 .footer-button {
+  display: flex;
   font-family: Roboto;
   font-style: normal;
+
   min-width: 200px;
   height: 50px;
   margin-left: 12px;
+  padding: 10px 29px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -762,12 +768,8 @@ body {
 }
 
 .footer-button-icon {
-  fill: black;
-  width: 24px;
-  height: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+  fill: currentColor;
+  margin-left: 10px;
 }
 
 /* PORTFOLIO */
@@ -942,8 +944,13 @@ body {
   justify-content: center;
 }
 
+.modal-close-button:focus,
+.modal-close-button:hover {
+  fill: var(--accent-color);
+}
+
 .close-icon {
-  fill: var(--black);
+  transition: fill var(--time) var(--function-cubic);
 }
 
 .is-hidden {
@@ -983,12 +990,21 @@ body {
 .modal-input {
   width: 100%;
   height: 40px;
-  padding: 12px 11px;
+  padding: 11px 42px;
   border: 1px solid var(--modal-input-border);
   border-radius: 4px;
   outline: none;
   background-color: transparent;
-  color: #212121;
+  transition: border-color var(--time) var(--function-cubic);
+}
+
+.modal-input:focus,
+.modal-input:hover {
+  border-color: var(--accent-color);
+}
+
+.modal-input:focus + .modal-input-icon {
+  fill: var(--accent-color);
 }
 
 .modal-input-icon {
@@ -996,7 +1012,8 @@ body {
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
-  fill: currentColor;
+  fill: var(--black);
+  transition: fill var(--time) var(--function-cubic);
 }
 
 .modal-form-comment {
@@ -1060,4 +1077,10 @@ body {
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background-color var(--time) var(--function-cubic);
+}
+
+.modal-button:focus,
+.modal-button:hover {
+  background-color: var(--modal-button-focus-color);
 }
