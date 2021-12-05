@@ -746,8 +746,8 @@ body {
 
 .footer-button {
   display: flex;
-  font-family: Roboto;
-  font-style: normal;
+  /* font-family: Roboto;
+  font-style: normal; */
 
   min-width: 200px;
   height: 50px;
@@ -1029,6 +1029,12 @@ body {
   border-radius: 4px;
   outline: none;
   background-color: transparent;
+  transition: border-color var(--time) var(--function-cubic);
+}
+
+.modal-comment:focus,
+.modal-comment:hover {
+  border-color: var(--accent-color);
 }
 
 .modal-comment::placeholder {
