@@ -1046,11 +1046,15 @@ body {
   color: var(--modal-input-placeholder-color);
 }
 
-.modal-checkbox {
+.modal-checkbox-field {
+  display: flex;
   margin-bottom: 30px;
 }
 
 .modal-checkbox-text {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -1058,9 +1062,37 @@ body {
   color: var(--modal-checkbox-text-color);
 }
 
+.modal-checkbox-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  margin-top: 4px;
+  margin-right: 8px;
+  border-radius: 2px;
+  display: flex;
+}
+
+.modal-checkbox-text:focus span {
+  border-color: var(--accent-color);
+}
+
+.icon-check {
+  fill: transparent;
+}
+
+.modal-check:checked + .modal-checkbox-text span {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.modal-check:checked + .modal-checkbox-text .icon-check {
+  fill: var(--white);
+}
+
 .checkbox-link {
   font-weight: 400;
   font-size: 14px;
+  margin-left: 4px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-skip-ink: none;

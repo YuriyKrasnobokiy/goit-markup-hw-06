@@ -505,15 +505,20 @@
                     id="modal-comment" placeholder="Введите текст"></textarea>
                 </div>
 
-                <div class="modal-checkbox">
-                    <label>
-                        <input type="checkbox" class="">
-                        <span class="modal-checkbox-text">
-                            Соглашаюсь с рассылкой и принимаю
-                        </span> 
-                        <a href="#" class="checkbox-link link">Условия договора</a>
-                    </label>
+                <div class="modal-checkbox-field">
+                    <input class="modal-check visually-hidden" name="policy" 
+                    type="checkbox" id="modal-check">
+                    <label for="modal-check" class="modal-checkbox-text">
+                        <span>
+                            <svg class="icon-check" width="16" hight="15">
+                                <use href="./images/icons.svg#icon-check-icon1">
+                                </use>
+                            </svg>
+                        </span>
+                        Соглашаюсь с рассылкой и принимаю 
+                        <a href="#" class="checkbox-link link">Условия договора</a></label>
                 </div>
+
                 <button class="modal-button" type="submit">Отправить</button>
             </form>
         </div>
