@@ -746,8 +746,6 @@ body {
 
 .footer-button {
   display: flex;
-  /* font-family: Roboto;
-  font-style: normal; */
 
   min-width: 200px;
   height: 50px;
@@ -896,6 +894,8 @@ body {
   letter-spacing: 0.03em;
 }
 
+/* BACKDROP */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -912,6 +912,8 @@ body {
 .backdrop.is-hidden .modal {
   transform: scale(2) skew(45deg);
 }
+
+/* MODAL */
 
 .modal {
   position: absolute;
