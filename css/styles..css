@@ -303,12 +303,14 @@ body {
   background-color: var(--hero-button-bg-color);
   border-radius: var(--btn-border-radius);
 
-  transition: box-shadow var(--time) var(--function-cubic);
+  transition: box-shadow var(--time) var(--function-cubic),
+    background-color var(--time) var(--function-cubic);
 }
 
 .hero-button:hover,
 .hero-button:focus {
   box-shadow: var(--hero-button-shadow);
+  background-color: var(--modal-button-focus-color);
 }
 
 /* features */
@@ -763,11 +765,17 @@ body {
 
   color: var(--white);
   background-color: var(--hero-button-bg-color);
+  transition: background-color var(--time) var(--function-cubic);
 }
 
 .footer-button-icon {
   fill: currentColor;
   margin-left: 10px;
+}
+
+.footer-button:hover,
+.footer-button:focus {
+  background-color: var(--modal-button-focus-color);
 }
 
 /* PORTFOLIO */
