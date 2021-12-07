@@ -1078,13 +1078,17 @@ body {
   transition: border-color var(--time) var(--function-cubic);
 }
 
-.modal-check-wrap:focus,
 .modal-check-wrap:hover {
   border-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .icon-check {
   fill: transparent;
+}
+
+.modal-check:focus + .modal-checkbox-text span {
+  border: 2px solid var(--accent-color);
 }
 
 .modal-check:checked + .modal-checkbox-text span {
